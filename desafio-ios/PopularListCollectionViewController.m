@@ -6,31 +6,27 @@
 //  Copyright (c) 2015 Mobistart. All rights reserved.
 //
 
-#import "PopularListCollectionViewController.h"
+#import "ShotListCollectionViewController.h"
+#import "Shot.h"
+#import "ShotCollectionViewCell.h"
 
-@interface PopularListCollectionViewController ()
+@interface ShotListCollectionViewController ()
+
+@property(nonatomic, strong) NSMutableArray *shots;
 
 @end
 
-@implementation PopularListCollectionViewController
+@implementation ShotListCollectionViewController
 
 static NSString * const reuseIdentifier = @"shotCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
+    Shot *shot1 = [[Shot alloc] initWithId:1885573 andTitle:@"Cape Brewing Company" andImage:@"ship_dribble_teaser" andViewCount:1357 andDescription:@"We illustrated these two labels for the Cape Brewing Company, a South African producer of craft beer"];
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
-}
+    _shots = [NSMutableArray arrayWithObjects:shot1, shot1,shot1,shot1,shot1,shot1,nil];
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
@@ -51,13 +47,25 @@ static NSString * const reuseIdentifier = @"shotCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return [_shots count];
 }
 
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
+    static NSString *identifier = @"shotCell";
+    
+    ShotCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    
+    Shot *shot = [self.shots objectAtIndex:indexPath.row];
+    
+    cell.titleLabel.text = shot.title;
+    [cell.titleLabel sizeToFit];
+    
+    cell.viewCountLabel.text = [NSString stringWithFormat:@"%2i", shot.viewCount];
+    [cell.viewCountLabel sizeToFit];
+    
+    //recipeImageView.image = [UIImage imageNamed:@"angry_birds_cake"];
     
     return cell;
 }
@@ -92,5 +100,20 @@ static NSString * const reuseIdentifier = @"shotCell";
 	
 }
 */
+
+#pragma mark – UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    CGSize retVal = CGSizeMake(280, 280);
+    
+    return retVal;
+}
+
+
+- (UIEdgeInsets)collectionView:
+(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(20, 20, 20, 20);
+}
 
 @end

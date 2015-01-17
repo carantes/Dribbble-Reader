@@ -14,6 +14,10 @@
 		872824D11A68CCAD00C52E08 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 872824CF1A68CCAD00C52E08 /* LaunchScreen.xib */; };
 		872824DD1A68CCAE00C52E08 /* desafio_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 872824DC1A68CCAE00C52E08 /* desafio_iosTests.m */; };
 		872824ED1A692D9200C52E08 /* PopularListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872824EC1A692D9200C52E08 /* PopularListCollectionViewController.m */; };
+		874AA6BF1A69E3E400915CCF /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA6BE1A69E3E400915CCF /* Shot.m */; };
+		874AA6C21A69F2AC00915CCF /* ShotCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA6C11A69F2AC00915CCF /* ShotCollectionViewCell.m */; };
+		874AA6C81A6A124C00915CCF /* NSDictionary+JSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA6C71A6A124C00915CCF /* NSDictionary+JSONData.m */; };
+		874AA6CC1A6A1E2300915CCF /* ShotDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA6CB1A6A1E2300915CCF /* ShotDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +42,16 @@
 		872824D61A68CCAE00C52E08 /* desafio-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desafio-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		872824DB1A68CCAE00C52E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		872824DC1A68CCAE00C52E08 /* desafio_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = desafio_iosTests.m; sourceTree = "<group>"; };
-		872824EB1A692D9200C52E08 /* PopularListCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularListCollectionViewController.h; sourceTree = "<group>"; };
+		872824EB1A692D9200C52E08 /* ShotListCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotListCollectionViewController.h; sourceTree = "<group>"; };
 		872824EC1A692D9200C52E08 /* PopularListCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularListCollectionViewController.m; sourceTree = "<group>"; };
+		874AA6BD1A69E3E400915CCF /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
+		874AA6BE1A69E3E400915CCF /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
+		874AA6C01A69F2AC00915CCF /* ShotCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotCollectionViewCell.h; sourceTree = "<group>"; };
+		874AA6C11A69F2AC00915CCF /* ShotCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotCollectionViewCell.m; sourceTree = "<group>"; };
+		874AA6C61A6A124C00915CCF /* NSDictionary+JSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONData.h"; sourceTree = "<group>"; };
+		874AA6C71A6A124C00915CCF /* NSDictionary+JSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONData.m"; sourceTree = "<group>"; };
+		874AA6CA1A6A1E2300915CCF /* ShotDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotDetailViewController.h; sourceTree = "<group>"; };
+		874AA6CB1A6A1E2300915CCF /* ShotDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +93,11 @@
 		872824BF1A68CCAD00C52E08 /* desafio-ios */ = {
 			isa = PBXGroup;
 			children = (
-				872824E81A68CCE500C52E08 /* Controller */,
-				872824E71A68CCD800C52E08 /* View */,
 				872824E61A68CCD100C52E08 /* Model */,
-				872824CA1A68CCAD00C52E08 /* Main.storyboard */,
-				872824CD1A68CCAD00C52E08 /* Images.xcassets */,
-				872824CF1A68CCAD00C52E08 /* LaunchScreen.xib */,
+				872824E71A68CCD800C52E08 /* View */,
+				872824E81A68CCE500C52E08 /* Controller */,
+				874AA6BC1A69E24900915CCF /* Helper */,
+				874AA6BB1A69E18400915CCF /* Resources */,
 				872824C01A68CCAD00C52E08 /* Supporting Files */,
 			);
 			path = "desafio-ios";
@@ -95,6 +106,8 @@
 		872824C01A68CCAD00C52E08 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				872824CA1A68CCAD00C52E08 /* Main.storyboard */,
+				872824CF1A68CCAD00C52E08 /* LaunchScreen.xib */,
 				872824C11A68CCAD00C52E08 /* Info.plist */,
 				872824C21A68CCAD00C52E08 /* main.m */,
 			);
@@ -121,6 +134,8 @@
 		872824E61A68CCD100C52E08 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				874AA6BD1A69E3E400915CCF /* Shot.h */,
+				874AA6BE1A69E3E400915CCF /* Shot.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -135,8 +150,11 @@
 		872824E81A68CCE500C52E08 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				872824EA1A692D6600C52E08 /* PopularList */,
+				872824EA1A692D6600C52E08 /* ShotList */,
+				874AA6C91A6A1E0700915CCF /* ShotDetail */,
 				872824E91A68CCEF00C52E08 /* AppDelegate */,
+				874AA6C01A69F2AC00915CCF /* ShotCollectionViewCell.h */,
+				874AA6C11A69F2AC00915CCF /* ShotCollectionViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -150,13 +168,39 @@
 			name = AppDelegate;
 			sourceTree = "<group>";
 		};
-		872824EA1A692D6600C52E08 /* PopularList */ = {
+		872824EA1A692D6600C52E08 /* ShotList */ = {
 			isa = PBXGroup;
 			children = (
-				872824EB1A692D9200C52E08 /* PopularListCollectionViewController.h */,
+				872824EB1A692D9200C52E08 /* ShotListCollectionViewController.h */,
 				872824EC1A692D9200C52E08 /* PopularListCollectionViewController.m */,
 			);
-			name = PopularList;
+			name = ShotList;
+			sourceTree = "<group>";
+		};
+		874AA6BB1A69E18400915CCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				872824CD1A68CCAD00C52E08 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		874AA6BC1A69E24900915CCF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				874AA6C61A6A124C00915CCF /* NSDictionary+JSONData.h */,
+				874AA6C71A6A124C00915CCF /* NSDictionary+JSONData.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		874AA6C91A6A1E0700915CCF /* ShotDetail */ = {
+			isa = PBXGroup;
+			children = (
+				874AA6CA1A6A1E2300915CCF /* ShotDetailViewController.h */,
+				874AA6CB1A6A1E2300915CCF /* ShotDetailViewController.m */,
+			);
+			name = ShotDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +306,10 @@
 				872824C61A68CCAD00C52E08 /* AppDelegate.m in Sources */,
 				872824C31A68CCAD00C52E08 /* main.m in Sources */,
 				872824ED1A692D9200C52E08 /* PopularListCollectionViewController.m in Sources */,
+				874AA6BF1A69E3E400915CCF /* Shot.m in Sources */,
+				874AA6CC1A6A1E2300915CCF /* ShotDetailViewController.m in Sources */,
+				874AA6C81A6A124C00915CCF /* NSDictionary+JSONData.m in Sources */,
+				874AA6C21A69F2AC00915CCF /* ShotCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +502,7 @@
 				872824E21A68CCAE00C52E08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		872824E31A68CCAE00C52E08 /* Build configuration list for PBXNativeTarget "desafio-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +511,7 @@
 				872824E51A68CCAE00C52E08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
