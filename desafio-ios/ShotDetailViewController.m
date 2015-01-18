@@ -7,6 +7,10 @@
 //
 
 #import "ShotDetailViewController.h"
+#import "Shot.h"
+#import "Player.h"
+#import "AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface ShotDetailViewController ()
 
@@ -17,8 +21,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.profileNameLabel.text = self.shot.player.name;
+    self.shotDescriptionTextView.text = self.shot.description;
+    
     [self.profileImageView.layer setMasksToBounds:YES];
     self.profileImageView.layer.cornerRadius = 25.0f;
+    
+    NSURL *url = [NSURL URLWithString:self.shot.player.avatar_url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    UIImage *placeholderImage = [UIImage imageNamed:@"Profile"];
+    
+    __weak UIImageView *weakImageView = self.profileImageView;
+    
+    [self.profileImageView setImageWithURLRequest:request
+                          placeholderImage:placeholderImage
+                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                       
+                                       weakImageView.image = image;
+                                       [weakImageView setNeedsLayout];
+                                       
+                                   } failure:nil];
+    
 }
 
 @end

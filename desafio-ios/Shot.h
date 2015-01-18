@@ -7,17 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONModel.h"
+#import "Player.h"
 
-@interface Shot : NSObject
+@interface Shot : JSONModel
 
 @property (nonatomic, assign) int id;
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSString * image;
-@property (nonatomic, assign) int viewCount;
-@property (nonatomic, retain) NSString * shortDescription;
+@property (nonatomic, strong) NSString * title;
+@property (nonatomic, strong) NSString * shotDescription;
+@property (nonatomic, assign) int height;
+@property (nonatomic, assign) int width;
+@property (nonatomic, assign) int likes_count;
+@property (nonatomic, assign) int comments_count;
+@property (nonatomic, strong) NSString * url;
+@property (nonatomic, strong) NSString * short_url;
+@property (nonatomic, assign) int views_count;
+@property (nonatomic, strong) NSString * image_url;
 
-
-- (id)initWithId:(int)id andTitle:(NSString *)title andImage:(NSString *)image andViewCount:(int)viewCount andDescription:(NSString *)shortDescription;
-
+@property (nonatomic, strong) Player *player;
 
 @end

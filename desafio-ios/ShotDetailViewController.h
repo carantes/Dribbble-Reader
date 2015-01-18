@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class Shot;
+
 @interface ShotDetailViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (strong, nonatomic) IBOutlet UILabel *profileNameLabel;
-
 @property (strong, nonatomic) IBOutlet UITextView *shotDescriptionTextView;
 
+@property (strong, nonatomic) Shot *shot;
 
 @end

@@ -9,26 +9,26 @@
         <!--Dribbble-->
         <scene sceneID="GK9-E0-RE3">
             <objects>
-                <collectionViewController id="Z9C-Xc-5sh" customClass="ShotListCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController id="Z9C-Xc-5sh" customClass="PopularListCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="aac-GW-fRi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hBM-wM-zTe">
-                            <size key="itemSize" width="200" height="200"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="hBM-wM-zTe">
+                            <size key="itemSize" width="280" height="280"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="center" reuseIdentifier="shotCell" id="jaO-pB-8CH" customClass="ShotCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angry_birds_cake" translatesAutoresizingMaskIntoConstraints="NO" id="BoK-xj-BWe">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="BoK-xj-BWe">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         </imageView>
                                         <view clipsSubviews="YES" alpha="0.75000000000000011" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7U8-k2-i4z">
@@ -46,41 +46,68 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="view_icon" translatesAutoresizingMaskIntoConstraints="NO" id="mbY-tZ-geo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="B3B-Lv-e1o"/>
+                                                        <constraint firstAttribute="width" constant="24" id="Vxp-v1-DAW"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="B3B-Lv-e1o"/>
+                                                            <exclude reference="Vxp-v1-DAW"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="B3B-Lv-e1o"/>
+                                                            <include reference="Vxp-v1-DAW"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="aY1-n0-sgK" firstAttribute="leading" secondItem="7U8-k2-i4z" secondAttribute="leading" constant="8" id="9hT-S3-AEu"/>
+                                                <constraint firstAttribute="centerY" secondItem="mbY-tZ-geo" secondAttribute="centerY" id="9w0-RM-ZIi"/>
                                                 <constraint firstAttribute="trailing" secondItem="spn-G6-BMb" secondAttribute="trailing" constant="8" id="J8t-DP-w49"/>
                                                 <constraint firstAttribute="centerY" secondItem="aY1-n0-sgK" secondAttribute="centerY" constant="0.5" id="Ubs-ry-DIZ">
                                                     <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                                 </constraint>
                                                 <constraint firstAttribute="height" constant="40" id="YmE-6K-Dsb"/>
+                                                <constraint firstItem="spn-G6-BMb" firstAttribute="leading" secondItem="mbY-tZ-geo" secondAttribute="trailing" constant="8" id="hHT-D3-fff"/>
                                                 <constraint firstAttribute="centerY" secondItem="spn-G6-BMb" secondAttribute="centerY" constant="0.5" id="jd8-ig-ze6"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="aY1-n0-sgK"/>
                                                     <exclude reference="spn-G6-BMb"/>
+                                                    <exclude reference="mbY-tZ-geo"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="YmE-6K-Dsb"/>
                                                     <exclude reference="9hT-S3-AEu"/>
                                                     <exclude reference="Ubs-ry-DIZ"/>
                                                     <exclude reference="J8t-DP-w49"/>
+                                                    <exclude reference="hHT-D3-fff"/>
                                                     <exclude reference="jd8-ig-ze6"/>
+                                                    <exclude reference="9w0-RM-ZIi"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="aY1-n0-sgK"/>
                                                     <include reference="spn-G6-BMb"/>
+                                                    <include reference="mbY-tZ-geo"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="YmE-6K-Dsb"/>
                                                     <include reference="9hT-S3-AEu"/>
                                                     <include reference="Ubs-ry-DIZ"/>
                                                     <include reference="J8t-DP-w49"/>
+                                                    <include reference="hHT-D3-fff"/>
                                                     <include reference="jd8-ig-ze6"/>
+                                                    <include reference="9w0-RM-ZIi"/>
                                                 </mask>
                                             </variation>
                                         </view>
@@ -130,7 +157,7 @@
                                     <outlet property="shotImage" destination="BoK-xj-BWe" id="Tv2-Rx-hxJ"/>
                                     <outlet property="titleLabel" destination="aY1-n0-sgK" id="Tjw-65-FpX"/>
                                     <outlet property="viewCountLabel" destination="spn-G6-BMb" id="a01-hd-MpB"/>
-                                    <segue destination="Lpn-2x-RNN" kind="presentation" modalTransitionStyle="coverVertical" id="gvu-Qw-FfY"/>
+                                    <segue destination="Lpn-2x-RNN" kind="show" identifier="popularListToShotDetailSegue" id="gvu-Qw-FfY"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -160,7 +187,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Gu-xY-kxi">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angry_birds_cake" translatesAutoresizingMaskIntoConstraints="NO" id="b7J-ZQ-z4N">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="b7J-ZQ-z4N">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="368" height="250"/>
@@ -219,7 +246,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKh-bM-18F">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile1" translatesAutoresizingMaskIntoConstraints="NO" id="cQB-zq-nVX">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="cQB-zq-nVX">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="417-Nu-PZ2"/>
@@ -245,7 +272,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zq-kK-Uq1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zq-kK-Uq1">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -362,7 +389,7 @@
         <!--Navigation Controller-->
         <scene sceneID="MVb-GN-04z">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gk7-uS-ExJ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gk7-uS-ExJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E1R-YF-hok">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -379,7 +406,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="angry_birds_cake" width="560" height="350"/>
-        <image name="profile1" width="160" height="160"/>
+        <image name="Placeholder" width="280" height="280"/>
+        <image name="Profile" width="50" height="50"/>
+        <image name="view_icon" width="24" height="24"/>
     </resources>
 </document>

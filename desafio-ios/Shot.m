@@ -10,18 +10,15 @@
 
 @implementation Shot
 
-- (id)initWithId:(int)id andTitle:(NSString *)title andImage:(NSString *)image andViewCount:(int)viewCount andDescription:(NSString *)shortDescription{
-    self = [super init];
-    if (self) {
-        
-        self.id = id;
-        self.title = title;
-        self.image = image;
-        self.viewCount = viewCount;
-        self.shortDescription = shortDescription;
-    }
-    
-    return self;
++(JSONKeyMapper*)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{
+        @"description": @"shotDescription",
+        @"image_url" : @"image_400_url"}];
+}
+
+- (NSString *)description {
+    return self.shotDescription;
 }
 
 @end
