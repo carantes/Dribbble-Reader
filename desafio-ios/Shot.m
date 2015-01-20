@@ -14,7 +14,7 @@
 {
     return [[JSONKeyMapper alloc] initWithDictionary:@{
         @"description": @"shotDescription",
-        @"image_url" : @"image_400_url"}];
+        @"image_url" : @"image_teaser_url"}];
 }
 
 - (NSString *)description {

@@ -23,7 +23,13 @@
     // Do any additional setup after loading the view.
     
     self.profileNameLabel.text = self.shot.player.name;
-    self.shotDescriptionTextView.text = self.shot.description;
+    
+    NSAttributedString *attributedDescription = [[NSAttributedString alloc] initWithData:[self.shot.description dataUsingEncoding:NSUTF8StringEncoding]
+                                     options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+                                               NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)}
+                          documentAttributes:nil error:nil];
+    
+    [[self.shotDescriptionTextView textStorage] setAttributedString:attributedDescription];
     
     [self.profileImageView.layer setMasksToBounds:YES];
     self.profileImageView.layer.cornerRadius = 25.0f;

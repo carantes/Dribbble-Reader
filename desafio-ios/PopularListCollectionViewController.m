@@ -16,6 +16,7 @@
 @interface PopularListCollectionViewController ()
 
 @property (nonatomic, strong) NSMutableArray *shots;
+@property (nonatomic, assign) int page;
 
 @end
 
@@ -24,12 +25,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.shots = [[NSMutableArray alloc] init];
+    self.page = 1;
+    
     [self fetchShots];
 }
 
 - (void)fetchShots {
 
-    NSURL *url = [NSURL URLWithString:@"http://api.dribbble.com/shots/popular?page=1"];
+    NSString *strURL = [NSString stringWithFormat:@"http://api.dribbble.com/shots/popular?page=%i", self.page];
+    NSURL *url = [NSURL URLWithString:strURL];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -40,14 +45,11 @@
         //NSLog(@"%@", responseObject);
         
         NSDictionary *responseDictionary = (NSDictionary *)responseObject;
-    
-        self.shots = [responseDictionary valueForKey:@"shots"];
         
-        NSLog(@"result count = %i", [_shots count]);
+        [self.shots addObjectsFromArray:responseDictionary[@"shots"]];
         
+        //if (self.page == 1)
         [self.collectionView reloadData];
-        
-        
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -122,6 +124,11 @@
                                        [weakCell setNeedsLayout];
                                        
                                    } failure:nil];
+    
+    if (indexPath.row == [self.shots count]-1) {
+        self.page++;
+        [self fetchShots];
+    }
     
     return cell;
 }
