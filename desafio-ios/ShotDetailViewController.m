@@ -9,8 +9,9 @@
 #import "ShotDetailViewController.h"
 #import "Shot.h"
 #import "Player.h"
-#import "AFNetworking.h"
+#import "UIKit+AFNetworking.h"
 #import "UIImageView+AFNetworking.h"
+#import "ShotView.h"
 
 @interface ShotDetailViewController ()
 
@@ -22,33 +23,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.profileNameLabel.text = self.shot.player.name;
+    //Shot
+    self.shotView.titleLabel.text = self.shot.title;
+    self.shotView.viewCountLabel.text = [NSString stringWithFormat:@"%2i", self.shot.views_count];
+    
+    //Load cached shot image
+    [self.shotView.shotImageView setImageWithURL:[NSURL URLWithString:self.shot.image_url] placeholderImage:[UIImage imageNamed:@"Placeholder"]];
     
     NSAttributedString *attributedDescription = [[NSAttributedString alloc] initWithData:[self.shot.description dataUsingEncoding:NSUTF8StringEncoding]
-                                     options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-                                               NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)}
-                          documentAttributes:nil error:nil];
+                                                                                 options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+                                                                                           NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)}
+                                                                      documentAttributes:nil error:nil];
     
     [[self.shotDescriptionTextView textStorage] setAttributedString:attributedDescription];
+    
+    //Player
+    self.profileNameLabel.text = self.shot.player.name;
     
     [self.profileImageView.layer setMasksToBounds:YES];
     self.profileImageView.layer.cornerRadius = 25.0f;
     
-    NSURL *url = [NSURL URLWithString:self.shot.player.avatar_url];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    UIImage *placeholderImage = [UIImage imageNamed:@"Profile"];
-    
-    __weak UIImageView *weakImageView = self.profileImageView;
-    
-    [self.profileImageView setImageWithURLRequest:request
-                          placeholderImage:placeholderImage
-                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-                                       
-                                       weakImageView.image = image;
-                                       [weakImageView setNeedsLayout];
-                                       
-                                   } failure:nil];
-    
+    //Load cached image
+    [self.profileImageView setImageWithURL:[NSURL URLWithString:self.shot.player.avatar_url] placeholderImage:[UIImage imageNamed:@"Profile"]];
 }
 
 @end

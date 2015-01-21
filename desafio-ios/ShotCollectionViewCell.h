@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class ShotView;
+
 @interface ShotCollectionViewCell : UICollectionViewCell
 
-@property (strong, nonatomic) IBOutlet UIImageView *shotImage;
-@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) IBOutlet UILabel *viewCountLabel;
+@property (strong, nonatomic) IBOutlet ShotView *shotView;
+
 
 @end

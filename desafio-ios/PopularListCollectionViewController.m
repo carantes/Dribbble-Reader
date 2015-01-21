@@ -9,9 +9,11 @@
 #import "PopularListCollectionViewController.h"
 #import "ShotCollectionViewCell.h"
 #import "AFNetworking.h"
+#import "UIKit+AFNetworking.h"
 #import "Shot.h"
 #import "UIImageView+AFNetworking.h"
 #import "ShotDetailViewController.h"
+#import "ShotView.h"
 
 @interface PopularListCollectionViewController ()
 
@@ -34,6 +36,7 @@
 - (void)fetchShots {
 
     NSString *strURL = [NSString stringWithFormat:@"http://api.dribbble.com/shots/popular?page=%i", self.page];
+    
     NSURL *url = [NSURL URLWithString:strURL];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
@@ -48,7 +51,6 @@
         
         [self.shots addObjectsFromArray:responseDictionary[@"shots"]];
         
-        //if (self.page == 1)
         [self.collectionView reloadData];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -105,25 +107,13 @@
 
     Shot *shot = [[Shot alloc] initWithDictionary:[self.shots objectAtIndex:indexPath.row] error:nil];
     
-    cell.titleLabel.text = shot.title;
-    [cell.titleLabel sizeToFit];
+    cell.shotView.titleLabel.text = shot.title;
+    [cell.shotView.titleLabel sizeToFit];
     
-    cell.viewCountLabel.text = [NSString stringWithFormat:@"%2i", shot.views_count];
-    [cell.viewCountLabel sizeToFit];
+    cell.shotView.viewCountLabel.text = [NSString stringWithFormat:@"%2i", shot.views_count];
+    [cell.shotView.viewCountLabel sizeToFit];
     
-    NSURL *url = [NSURL URLWithString:shot.image_url];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    UIImage *placeholderImage = [UIImage imageNamed:@"Placeholder"];
-    __weak ShotCollectionViewCell *weakCell = cell;
-    
-    [cell.shotImage setImageWithURLRequest:request
-                          placeholderImage:placeholderImage
-                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-                                       
-                                       weakCell.shotImage.image = image;
-                                       [weakCell setNeedsLayout];
-                                       
-                                   } failure:nil];
+    [cell.shotView.shotImageView setImageWithURL:[NSURL URLWithString:shot.image_url] placeholderImage:[UIImage imageNamed:@"Placeholder"]];
     
     if (indexPath.row == [self.shots count]-1) {
         self.page++;
