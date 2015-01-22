@@ -19,6 +19,7 @@
 
 @property (nonatomic, strong) NSMutableArray *shots;
 @property (nonatomic, assign) int page;
+@property (nonatomic, assign) CGSize cellSize;
 
 @end
 
@@ -29,6 +30,7 @@
     
     self.shots = [[NSMutableArray alloc] init];
     self.page = 1;
+    self.cellSize = CGSizeMake(280, 230);
     
     [self fetchShots];
 }
@@ -45,7 +47,7 @@
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        //NSLog(@"%@", responseObject);
+        NSLog(@"%@", responseObject);
         
         NSDictionary *responseDictionary = (NSDictionary *)responseObject;
         
@@ -113,7 +115,8 @@
     cell.shotView.viewCountLabel.text = [NSString stringWithFormat:@"%2i", shot.views_count];
     [cell.shotView.viewCountLabel sizeToFit];
     
-    [cell.shotView.shotImageView setImageWithURL:[NSURL URLWithString:shot.image_url] placeholderImage:[UIImage imageNamed:@"Placeholder"]];
+    UIImage *placeholder = [UIImage imageNamed:@"Placeholder"];
+    [cell.shotView.shotImageView setImageWithURL:[NSURL URLWithString:shot.image_url] placeholderImage:placeholder];
     
     if (indexPath.row == [self.shots count]-1) {
         self.page++;
@@ -123,7 +126,31 @@
     return cell;
 }
 
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+
+    [super traitCollectionDidChange:previousTraitCollection];
+    
+    
+    //Ipad Portrait and Landscape
+    if ((self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassRegular) && (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular)) {
+        self.cellSize = CGSizeMake(320, 300);
+    }
+    //Iphone Landscape
+    else if (self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact) {
+        self.cellSize = CGSizeMake(230, 230);
+    }
+    else
+        self.cellSize = CGSizeMake(280, 230);
+    
+    
+    [self.collectionView reloadItemsAtIndexPaths:([self.collectionView indexPathsForVisibleItems])];
+}
+
+
 #pragma mark <UICollectionViewDelegate>
+
+
+
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
@@ -155,15 +182,12 @@
 */
 
 #pragma mark – UICollectionViewDelegateFlowLayout
-/*
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    CGSize retVal = CGSizeMake(280, 280);
-    
-    return retVal;
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return self.cellSize;
 }
 
-
+/*
 - (UIEdgeInsets)collectionView:
 (UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(20, 20, 20, 20);

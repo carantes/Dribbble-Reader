@@ -14,6 +14,8 @@
 		872824D11A68CCAD00C52E08 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 872824CF1A68CCAD00C52E08 /* LaunchScreen.xib */; };
 		872824DD1A68CCAE00C52E08 /* desafio_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 872824DC1A68CCAE00C52E08 /* desafio_iosTests.m */; };
 		872824ED1A692D9200C52E08 /* PopularListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872824EC1A692D9200C52E08 /* PopularListCollectionViewController.m */; };
+		874578AB1A7086B2005B877E /* shot.xml in Resources */ = {isa = PBXBuildFile; fileRef = 874578AA1A7086B2005B877E /* shot.xml */; };
+		874578AC1A7086B2005B877E /* shot.xml in Resources */ = {isa = PBXBuildFile; fileRef = 874578AA1A7086B2005B877E /* shot.xml */; };
 		874AA6BF1A69E3E400915CCF /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA6BE1A69E3E400915CCF /* Shot.m */; };
 		874AA6C21A69F2AC00915CCF /* ShotCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA6C11A69F2AC00915CCF /* ShotCollectionViewCell.m */; };
 		874AA6CC1A6A1E2300915CCF /* ShotDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA6CB1A6A1E2300915CCF /* ShotDetailViewController.m */; };
@@ -44,6 +46,8 @@
 		874AA7261A6B17FD00915CCF /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA7191A6B17FD00915CCF /* JSONModel+networking.m */; };
 		874AA7271A6B17FD00915CCF /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA71C1A6B17FD00915CCF /* JSONKeyMapper.m */; };
 		874AA7281A6B17FD00915CCF /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA71E1A6B17FD00915CCF /* JSONValueTransformer.m */; };
+		876DFA8C1A6E99230014E337 /* ShotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 876DFA8B1A6E99230014E337 /* ShotView.xib */; };
+		876DFA8F1A6E99AD0014E337 /* ShotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 876DFA8E1A6E99AD0014E337 /* ShotView.m */; };
 		87817B121A6B1DD500CF98A9 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 87817B111A6B1DD500CF98A9 /* Player.m */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +75,7 @@
 		872824DC1A68CCAE00C52E08 /* desafio_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = desafio_iosTests.m; sourceTree = "<group>"; };
 		872824EB1A692D9200C52E08 /* PopularListCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularListCollectionViewController.h; sourceTree = "<group>"; };
 		872824EC1A692D9200C52E08 /* PopularListCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularListCollectionViewController.m; sourceTree = "<group>"; };
+		874578AA1A7086B2005B877E /* shot.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = shot.xml; sourceTree = "<group>"; };
 		874AA6BD1A69E3E400915CCF /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
 		874AA6BE1A69E3E400915CCF /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
 		874AA6C01A69F2AC00915CCF /* ShotCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotCollectionViewCell.h; sourceTree = "<group>"; };
@@ -134,6 +139,9 @@
 		874AA71C1A6B17FD00915CCF /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
 		874AA71D1A6B17FD00915CCF /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
 		874AA71E1A6B17FD00915CCF /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
+		876DFA8B1A6E99230014E337 /* ShotView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotView.xib; sourceTree = "<group>"; };
+		876DFA8D1A6E99AD0014E337 /* ShotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotView.h; sourceTree = "<group>"; };
+		876DFA8E1A6E99AD0014E337 /* ShotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotView.m; sourceTree = "<group>"; };
 		87817B101A6B1DD500CF98A9 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		87817B111A6B1DD500CF98A9 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +238,7 @@
 		872824E71A68CCD800C52E08 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				876DFA901A6EA02C0014E337 /* ShotView */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -267,6 +276,7 @@
 		874AA6BB1A69E18400915CCF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				874578AA1A7086B2005B877E /* shot.xml */,
 				872824CD1A68CCAD00C52E08 /* Images.xcassets */,
 			);
 			name = Resources;
@@ -408,6 +418,16 @@
 			path = JSONModelTransformations;
 			sourceTree = "<group>";
 		};
+		876DFA901A6EA02C0014E337 /* ShotView */ = {
+			isa = PBXGroup;
+			children = (
+				876DFA8B1A6E99230014E337 /* ShotView.xib */,
+				876DFA8D1A6E99AD0014E337 /* ShotView.h */,
+				876DFA8E1A6E99AD0014E337 /* ShotView.m */,
+			);
+			name = ShotView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -489,7 +509,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				872824CC1A68CCAD00C52E08 /* Main.storyboard in Resources */,
+				874578AB1A7086B2005B877E /* shot.xml in Resources */,
 				872824D11A68CCAD00C52E08 /* LaunchScreen.xib in Resources */,
+				876DFA8C1A6E99230014E337 /* ShotView.xib in Resources */,
 				872824CE1A68CCAD00C52E08 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +520,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				874578AC1A7086B2005B877E /* shot.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +534,7 @@
 				874AA7251A6B17FD00915CCF /* JSONHTTPClient.m in Sources */,
 				874AA7031A6AFEAE00915CCF /* UIRefreshControl+AFNetworking.m in Sources */,
 				874AA6F91A6AFEAE00915CCF /* AFURLConnectionOperation.m in Sources */,
+				876DFA8F1A6E99AD0014E337 /* ShotView.m in Sources */,
 				872824C61A68CCAD00C52E08 /* AppDelegate.m in Sources */,
 				874AA7021A6AFEAE00915CCF /* UIProgressView+AFNetworking.m in Sources */,
 				872824C31A68CCAD00C52E08 /* main.m in Sources */,
