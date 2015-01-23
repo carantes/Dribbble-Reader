@@ -14,6 +14,8 @@
 #import "UIImageView+AFNetworking.h"
 #import "ShotDetailViewController.h"
 #import "ShotView.h"
+#import "MBProgressHUD.h"
+
 
 @interface PopularListCollectionViewController ()
 
@@ -31,7 +33,7 @@
     self.shots = [[NSMutableArray alloc] init];
     self.page = 1;
     self.cellSize = CGSizeMake(280, 230);
-    
+
     [self fetchShots];
 }
 
@@ -120,7 +122,16 @@
     
     if (indexPath.row == [self.shots count]-1) {
         self.page++;
-        [self fetchShots];
+        
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+            // Do something...
+            [self fetchShots];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+            });
+        });
+        
     }
     
     return cell;
