@@ -2,7 +2,9 @@
 
 Aplicativo para consultar a [Dribbble API](http://developer.dribbble.com/v1/) e trazer os shots + populares .
 
-<Screenshots>
+![Home](https://cloud.githubusercontent.com/assets/1878740/7740642/0330d958-ff4b-11e4-92e6-5da01badce2d.png)
+![Detail](https://cloud.githubusercontent.com/assets/1878740/7740643/034c120e-ff4b-11e4-9fb3-3d3632096de4.png)
+
 
 ## Principais Features
 * Lista de shots . API (http://api.dribbble.com/shots/popular?page=1)
