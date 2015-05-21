@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		411D7E0E5CD811317E50AEC4 /* libPods-desafio-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6127CAD13964AD8102DE7D /* libPods-desafio-ios.a */; };
+		872824C31A68CCAD00C52E08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 872824C21A68CCAD00C52E08 /* main.m */; };
+		872824C61A68CCAD00C52E08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 872824C51A68CCAD00C52E08 /* AppDelegate.m */; };
+		872824CC1A68CCAD00C52E08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872824CA1A68CCAD00C52E08 /* Main.storyboard */; };
+		872824CE1A68CCAD00C52E08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 872824CD1A68CCAD00C52E08 /* Images.xcassets */; };
+		872824D11A68CCAD00C52E08 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 872824CF1A68CCAD00C52E08 /* LaunchScreen.xib */; };
+		872824DD1A68CCAE00C52E08 /* desafio_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 872824DC1A68CCAE00C52E08 /* desafio_iosTests.m */; };
+		872824ED1A692D9200C52E08 /* PopularListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872824EC1A692D9200C52E08 /* PopularListCollectionViewController.m */; };
+		874578AB1A7086B2005B877E /* shot.xml in Resources */ = {isa = PBXBuildFile; fileRef = 874578AA1A7086B2005B877E /* shot.xml */; };
+		874578AC1A7086B2005B877E /* shot.xml in Resources */ = {isa = PBXBuildFile; fileRef = 874578AA1A7086B2005B877E /* shot.xml */; };
+		874AA6BF1A69E3E400915CCF /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA6BE1A69E3E400915CCF /* Shot.m */; };
+		874AA6C21A69F2AC00915CCF /* ShotCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA6C11A69F2AC00915CCF /* ShotCollectionViewCell.m */; };
+		874AA6CC1A6A1E2300915CCF /* ShotDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874AA6CB1A6A1E2300915CCF /* ShotDetailViewController.m */; };
+		876DFA8C1A6E99230014E337 /* ShotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 876DFA8B1A6E99230014E337 /* ShotView.xib */; };
+		876DFA8F1A6E99AD0014E337 /* ShotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 876DFA8E1A6E99AD0014E337 /* ShotView.m */; };
+		87817B121A6B1DD500CF98A9 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 87817B111A6B1DD500CF98A9 /* Player.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		872824D71A68CCAE00C52E08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 872824B51A68CCAD00C52E08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 872824BC1A68CCAD00C52E08;
+			remoteInfo = "desafio-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B6127CAD13964AD8102DE7D /* libPods-desafio-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-desafio-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		872824BD1A68CCAD00C52E08 /* Dribbble-Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dribbble-Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		872824C11A68CCAD00C52E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		872824C21A68CCAD00C52E08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		872824C41A68CCAD00C52E08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		872824C51A68CCAD00C52E08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		872824CB1A68CCAD00C52E08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		872824CD1A68CCAD00C52E08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		872824D01A68CCAD00C52E08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		872824D61A68CCAE00C52E08 /* Dribbble-ReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dribbble-ReaderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		872824DB1A68CCAE00C52E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		872824DC1A68CCAE00C52E08 /* desafio_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = desafio_iosTests.m; sourceTree = "<group>"; };
+		872824EB1A692D9200C52E08 /* PopularListCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularListCollectionViewController.h; sourceTree = "<group>"; };
+		872824EC1A692D9200C52E08 /* PopularListCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularListCollectionViewController.m; sourceTree = "<group>"; };
+		874578AA1A7086B2005B877E /* shot.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = shot.xml; sourceTree = "<group>"; };
+		874AA6BD1A69E3E400915CCF /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
+		874AA6BE1A69E3E400915CCF /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
+		874AA6C01A69F2AC00915CCF /* ShotCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotCollectionViewCell.h; sourceTree = "<group>"; };
+		874AA6C11A69F2AC00915CCF /* ShotCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotCollectionViewCell.m; sourceTree = "<group>"; };
+		874AA6CA1A6A1E2300915CCF /* ShotDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotDetailViewController.h; sourceTree = "<group>"; };
+		874AA6CB1A6A1E2300915CCF /* ShotDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotDetailViewController.m; sourceTree = "<group>"; };
+		876DFA8B1A6E99230014E337 /* ShotView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotView.xib; sourceTree = "<group>"; };
+		876DFA8D1A6E99AD0014E337 /* ShotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotView.h; sourceTree = "<group>"; };
+		876DFA8E1A6E99AD0014E337 /* ShotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotView.m; sourceTree = "<group>"; };
+		87817B101A6B1DD500CF98A9 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		87817B111A6B1DD500CF98A9 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		CB117AB82688876230B1BA02 /* Pods-desafio-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-desafio-ios/Pods-desafio-ios.release.xcconfig"; sourceTree = "<group>"; };
+		F770A4CC20BC7702A1DDA56F /* Pods-desafio-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-desafio-ios/Pods-desafio-ios.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		872824BA1A68CCAD00C52E08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				411D7E0E5CD811317E50AEC4 /* libPods-desafio-ios.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		872824D31A68CCAE00C52E08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		872824B41A68CCAD00C52E08 = {
+			isa = PBXGroup;
+			children = (
+				872824BF1A68CCAD00C52E08 /* desafio-ios */,
+				872824D91A68CCAE00C52E08 /* desafio-iosTests */,
+				872824BE1A68CCAD00C52E08 /* Products */,
+				A8B187CFEC89ED7B9FF4D413 /* Pods */,
+				F22D98BF6E159779FE51DAE3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		872824BE1A68CCAD00C52E08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				872824BD1A68CCAD00C52E08 /* Dribbble-Reader.app */,
+				872824D61A68CCAE00C52E08 /* Dribbble-ReaderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		872824BF1A68CCAD00C52E08 /* desafio-ios */ = {
+			isa = PBXGroup;
+			children = (
+				872824E61A68CCD100C52E08 /* Model */,
+				872824E71A68CCD800C52E08 /* View */,
+				872824E81A68CCE500C52E08 /* Controller */,
+				874AA6BC1A69E24900915CCF /* Helper */,
+				874AA6BB1A69E18400915CCF /* Resources */,
+				872824C01A68CCAD00C52E08 /* Supporting Files */,
+			);
+			path = "desafio-ios";
+			sourceTree = "<group>";
+		};
+		872824C01A68CCAD00C52E08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				872824CA1A68CCAD00C52E08 /* Main.storyboard */,
+				872824CF1A68CCAD00C52E08 /* LaunchScreen.xib */,
+				872824C11A68CCAD00C52E08 /* Info.plist */,
+				872824C21A68CCAD00C52E08 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		872824D91A68CCAE00C52E08 /* desafio-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				872824DC1A68CCAE00C52E08 /* desafio_iosTests.m */,
+				872824DA1A68CCAE00C52E08 /* Supporting Files */,
+			);
+			path = "desafio-iosTests";
+			sourceTree = "<group>";
+		};
+		872824DA1A68CCAE00C52E08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				872824DB1A68CCAE00C52E08 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		872824E61A68CCD100C52E08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				874AA6BD1A69E3E400915CCF /* Shot.h */,
+				874AA6BE1A69E3E400915CCF /* Shot.m */,
+				87817B101A6B1DD500CF98A9 /* Player.h */,
+				87817B111A6B1DD500CF98A9 /* Player.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		872824E71A68CCD800C52E08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				876DFA901A6EA02C0014E337 /* ShotView */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		872824E81A68CCE500C52E08 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				872824EA1A692D6600C52E08 /* ShotList */,
+				874AA6C91A6A1E0700915CCF /* ShotDetail */,
+				872824E91A68CCEF00C52E08 /* AppDelegate */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		872824E91A68CCEF00C52E08 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				872824C41A68CCAD00C52E08 /* AppDelegate.h */,
+				872824C51A68CCAD00C52E08 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		872824EA1A692D6600C52E08 /* ShotList */ = {
+			isa = PBXGroup;
+			children = (
+				874AA6C01A69F2AC00915CCF /* ShotCollectionViewCell.h */,
+				874AA6C11A69F2AC00915CCF /* ShotCollectionViewCell.m */,
+				872824EB1A692D9200C52E08 /* PopularListCollectionViewController.h */,
+				872824EC1A692D9200C52E08 /* PopularListCollectionViewController.m */,
+			);
+			name = ShotList;
+			sourceTree = "<group>";
+		};
+		874AA6BB1A69E18400915CCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				874578AA1A7086B2005B877E /* shot.xml */,
+				872824CD1A68CCAD00C52E08 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		874AA6BC1A69E24900915CCF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		874AA6C91A6A1E0700915CCF /* ShotDetail */ = {
+			isa = PBXGroup;
+			children = (
+				874AA6CA1A6A1E2300915CCF /* ShotDetailViewController.h */,
+				874AA6CB1A6A1E2300915CCF /* ShotDetailViewController.m */,
+			);
+			name = ShotDetail;
+			sourceTree = "<group>";
+		};
+		876DFA901A6EA02C0014E337 /* ShotView */ = {
+			isa = PBXGroup;
+			children = (
+				876DFA8B1A6E99230014E337 /* ShotView.xib */,
+				876DFA8D1A6E99AD0014E337 /* ShotView.h */,
+				876DFA8E1A6E99AD0014E337 /* ShotView.m */,
+			);
+			name = ShotView;
+			sourceTree = "<group>";
+		};
+		A8B187CFEC89ED7B9FF4D413 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F770A4CC20BC7702A1DDA56F /* Pods-desafio-ios.debug.xcconfig */,
+				CB117AB82688876230B1BA02 /* Pods-desafio-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F22D98BF6E159779FE51DAE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B6127CAD13964AD8102DE7D /* libPods-desafio-ios.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		872824BC1A68CCAD00C52E08 /* Dribbble-Reader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 872824E01A68CCAE00C52E08 /* Build configuration list for PBXNativeTarget "Dribbble-Reader" */;
+			buildPhases = (
+				C9BBD73D8857A4770F3B3D0B /* Check Pods Manifest.lock */,
+				872824B91A68CCAD00C52E08 /* Sources */,
+				872824BA1A68CCAD00C52E08 /* Frameworks */,
+				872824BB1A68CCAD00C52E08 /* Resources */,
+				43C15C850737E70EE317C292 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dribbble-Reader";
+			productName = "desafio-ios";
+			productReference = 872824BD1A68CCAD00C52E08 /* Dribbble-Reader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		872824D51A68CCAE00C52E08 /* Dribbble-ReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 872824E31A68CCAE00C52E08 /* Build configuration list for PBXNativeTarget "Dribbble-ReaderTests" */;
+			buildPhases = (
+				872824D21A68CCAE00C52E08 /* Sources */,
+				872824D31A68CCAE00C52E08 /* Frameworks */,
+				872824D41A68CCAE00C52E08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				872824D81A68CCAE00C52E08 /* PBXTargetDependency */,
+			);
+			name = "Dribbble-ReaderTests";
+			productName = "desafio-iosTests";
+			productReference = 872824D61A68CCAE00C52E08 /* Dribbble-ReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		872824B51A68CCAD00C52E08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Mobistart;
+				TargetAttributes = {
+					872824BC1A68CCAD00C52E08 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					872824D51A68CCAE00C52E08 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 872824BC1A68CCAD00C52E08;
+					};
+				};
+			};
+			buildConfigurationList = 872824B81A68CCAD00C52E08 /* Build configuration list for PBXProject "Dribbble-Reader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 872824B41A68CCAD00C52E08;
+			productRefGroup = 872824BE1A68CCAD00C52E08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				872824BC1A68CCAD00C52E08 /* Dribbble-Reader */,
+				872824D51A68CCAE00C52E08 /* Dribbble-ReaderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		872824BB1A68CCAD00C52E08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				872824CC1A68CCAD00C52E08 /* Main.storyboard in Resources */,
+				874578AB1A7086B2005B877E /* shot.xml in Resources */,
+				872824D11A68CCAD00C52E08 /* LaunchScreen.xib in Resources */,
+				876DFA8C1A6E99230014E337 /* ShotView.xib in Resources */,
+				872824CE1A68CCAD00C52E08 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		872824D41A68CCAE00C52E08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				874578AC1A7086B2005B877E /* shot.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43C15C850737E70EE317C292 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-desafio-ios/Pods-desafio-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9BBD73D8857A4770F3B3D0B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		872824B91A68CCAD00C52E08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				876DFA8F1A6E99AD0014E337 /* ShotView.m in Sources */,
+				872824C61A68CCAD00C52E08 /* AppDelegate.m in Sources */,
+				872824C31A68CCAD00C52E08 /* main.m in Sources */,
+				872824ED1A692D9200C52E08 /* PopularListCollectionViewController.m in Sources */,
+				874AA6BF1A69E3E400915CCF /* Shot.m in Sources */,
+				87817B121A6B1DD500CF98A9 /* Player.m in Sources */,
+				874AA6CC1A6A1E2300915CCF /* ShotDetailViewController.m in Sources */,
+				874AA6C21A69F2AC00915CCF /* ShotCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		872824D21A68CCAE00C52E08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				872824DD1A68CCAE00C52E08 /* desafio_iosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		872824D81A68CCAE00C52E08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 872824BC1A68CCAD00C52E08 /* Dribbble-Reader */;
+			targetProxy = 872824D71A68CCAE00C52E08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		872824CA1A68CCAD00C52E08 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				872824CB1A68CCAD00C52E08 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		872824CF1A68CCAD00C52E08 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				872824D01A68CCAD00C52E08 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		872824DE1A68CCAE00C52E08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		872824DF1A68CCAE00C52E08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		872824E11A68CCAE00C52E08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F770A4CC20BC7702A1DDA56F /* Pods-desafio-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "desafio-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "Dribbble-Reader";
+			};
+			name = Debug;
+		};
+		872824E21A68CCAE00C52E08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB117AB82688876230B1BA02 /* Pods-desafio-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "desafio-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "Dribbble-Reader";
+			};
+			name = Release;
+		};
+		872824E41A68CCAE00C52E08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "desafio-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "Dribbble-ReaderTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desafio-ios.app/desafio-ios";
+			};
+			name = Debug;
+		};
+		872824E51A68CCAE00C52E08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "desafio-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "Dribbble-ReaderTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desafio-ios.app/desafio-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		872824B81A68CCAD00C52E08 /* Build configuration list for PBXProject "Dribbble-Reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				872824DE1A68CCAE00C52E08 /* Debug */,
+				872824DF1A68CCAE00C52E08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		872824E01A68CCAE00C52E08 /* Build configuration list for PBXNativeTarget "Dribbble-Reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				872824E11A68CCAE00C52E08 /* Debug */,
+				872824E21A68CCAE00C52E08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		872824E31A68CCAE00C52E08 /* Build configuration list for PBXNativeTarget "Dribbble-ReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				872824E41A68CCAE00C52E08 /* Debug */,
+				872824E51A68CCAE00C52E08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 872824B51A68CCAD00C52E08 /* Project object */;
+}
