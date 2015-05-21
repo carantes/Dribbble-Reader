@@ -20,3 +20,7 @@ Extras:
 * Mapeamento json utilizando [JSON Model] (https://github.com/icanzilb/JSONModel/)
 * Framework para Comunicação com API [AFNetwork](https://github.com/AFNetworking/AFNetworking)
 * Cache de Imagens . Ex [SDWebImage](https://github.com/rs/SDWebImage)
+
+### Autor
+
+Carlos Arantes ([@carantes](http://twitter.com/carantes))
